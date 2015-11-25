@@ -23,11 +23,6 @@ Route::get('/', function () {
     return view('app');
 });
 
-/*
-Route::get('art',function(){
-	return view('art.index');
-});
-*/
 
 
 Route::group(array('middleware' => 'auth'), function()

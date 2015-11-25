@@ -18,7 +18,7 @@ class ArtMigration extends Migration
             $table->string('imageURL');
             $table->integer('width');
             $table->integer('height');
-            $table->tinyInteger('active')->default(0);
+            $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
     }
