@@ -53,8 +53,8 @@ class ArtController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        $art = Art::all();
+        return Redirect::route('art.show');
 
     /**
      * Show the form for editing the specified resource.
@@ -102,7 +102,8 @@ class ArtController extends Controller
         //
     }
     
-     public function activate($id, $active){
+    public function activate($id, $active)
+    {
         
         $art = Art::whereId($id)->first;
         

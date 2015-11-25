@@ -21,8 +21,8 @@
      	<tbody>
 		@foreach( $art as $art )
             <tr>
-            	{!! Form::open(array('class' => 'form-inline', 'method' => 'POST', 'route' => array('art.edit', $art->id,$art->active))) !!}
-                        <th><a href="{{ route('art.show', $art->id) }}">{{ $art->name }}</a></th>
+            	{!! Form::open(array('class' => 'form-inline', 'method' => 'POST', 'route' => array('art.index', $art->id,$art->active))) !!}
+                        <th>{!! link_to_route('art.show', $art->name, array($art->id)) !!}</th>
                         <th>{{$art->width}} x {{$art->height}}</th>
                         @if($art->active === 1)
                         	<th>{!! Form::submit('Deactivate', array('class' => 'btn orange')) !!}</th>
