@@ -28,7 +28,7 @@ Route::get('/', function () {
 Route::group(array('middleware' => 'auth'), function()
 {
   	Route::resource('art', 'ArtController');
-	Route::resource('', '');
-	Route::resource('', '');
+	//Route::resource('', '');
+	//Route::resource('', '');
 
 });

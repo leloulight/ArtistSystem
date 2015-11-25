@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Art;
+use Redirect;
+
 
 class ArtController extends Controller
 {
@@ -54,8 +56,9 @@ class ArtController extends Controller
     public function show($id)
     {
         $art = Art::all();
-        return Redirect::route('art.show');
-
+        
+        return view('art.show', array( 'art' => Art::whereId($id)->first() ));
+    }
     /**
      * Show the form for editing the specified resource.
      *
