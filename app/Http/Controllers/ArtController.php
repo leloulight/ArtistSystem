@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Art;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,8 @@ class ArtController extends Controller
      */
     public function index()
     {
-        return view('art.index');
+        $art = Art::all();
+        return view('art.index')->with('art',$art);
     }
 
     /**

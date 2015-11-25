@@ -12,9 +12,9 @@
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">Logo</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="{{ Request::is('nosotros*') ? 'active' : '' }}">{!! link_to_route('nosotros.index', 'Acerca De') !!}</li>
+                <li class="{{ Request::is('nosotros*') ? 'active' : '' }}">{!! link_to_route('art.index', 'Acerca De') !!}</li>
                 <li class="{{ Request::is('obras*') ? 'active' : '' }}">{!! link_to_route('art.index', 'Obras') !!}</li>
-                <li class="{{ Request::is('contacto*') ? 'active' : '' }}">{!! link_to_route('contact.index', 'Contacto') !!}</li>
+                <li class="{{ Request::is('contacto*') ? 'active' : '' }}">{!! link_to_route('art.index', 'Contacto') !!}</li>
               </ul>
             </div>
         </nav>
