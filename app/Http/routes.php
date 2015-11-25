@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('art',function(){
-	return view('art');
+	return view('art.index');
 });
 
 /*

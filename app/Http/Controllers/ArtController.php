@@ -16,7 +16,7 @@ class ArtController extends Controller
      */
     public function index()
     {
-        //
+        return view('art.index');
     }
 
     /**
