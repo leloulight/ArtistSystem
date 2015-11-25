@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Art;
 use Redirect;
+use Input;
 
 
 class ArtController extends Controller

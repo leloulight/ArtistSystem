@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Art extends Model
 {
-    protected $rules = [];
+    public static $rules = [];
     protected $guarded = ['active'];
 
 }
