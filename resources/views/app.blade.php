@@ -12,15 +12,16 @@
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">Logo</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="{{ Request::is('nosotros*') ? 'active' : '' }}">{!! link_to_route('nosotros.index', 'Acerca De') !!}</li>
-                <li class="{{ Request::is('obras*') ? 'active' : '' }}">{!! link_to_route('art.index', 'Obras') !!}</li>
-                <li class="{{ Request::is('contacto*') ? 'active' : '' }}">{!! link_to_route('contact.index', 'Contacto') !!}</li>
+                <li {{ Request::is('nosotros*') ? 'active' : '' }}> {!! link_to('/', 'Acerca De') !!}</li>
+                <li {{ Request::is('art*') ? 'active' : '' }}> {!! link_to('/', 'Obras') !!}</li>
+                <li {{ Request::is('contacto*') ? 'active' : '' }}> {!! link_to('/', 'Contacto') !!}</li>
+                <li> {!! link_to('/', 'Logout') !!} </li>
               </ul>
             </div>
         </nav>
         <div class="container">
         @if (Session::has('message'))
-            <div class="flash alert-{!! Session::has('classMessage') ? Session::get('classMessage')  : 'info' !!}">
+            <div class="flash alert-info">
                 <p>{{ Session::get('message') }}</p>
             </div>
         @endif
@@ -39,5 +40,8 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         @show
+        
     </body>
+
+    
 </html>
