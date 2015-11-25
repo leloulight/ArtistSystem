@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::group(array('middleware' => 'auth'), function()
 {
   	Route::resource('art', 'ArtController');
+   	Route::post('art/activate/{id}', 'ArtController@activate');
   	//Route::get('activate', 'ArtController@activate');
 	//Route::resource('', '');
 	//Route::resource('', '');

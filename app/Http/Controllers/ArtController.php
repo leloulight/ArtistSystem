@@ -106,14 +106,14 @@ class ArtController extends Controller
         //
     }
     
-    public function activate($id, $active)
+    public function activate($id)
     {
         
-        $art = Art::whereId($id)->first;
+        $art = Art::whereId($id)->first();
         
-        if($art && ($active == 0 || $active == 1) ){
+        if($art){
 
-            if($active == 0)
+            if($art->active == 0)
                 $art->active = 1;
             else
                 $art->active = 0;

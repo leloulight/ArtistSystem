@@ -21,7 +21,7 @@
      	<tbody>
 		@foreach( $art as $art )
             <tr>
-            	{!! Form::open(array('class' => 'form-inline', 'method' => 'POST', 'action' => array('ArtController@activate', $art->id,$art->active))) !!}
+            	{!! Form::open(array('class' => 'form-inline', 'method' => 'POST', 'url' => array('art/activate', $art->id  ) )) !!}
                         <th>{!! link_to_route('art.show', $art->name, array($art->id)) !!}</th>
                         <th>{{$art->width}} x {{$art->height}}</th>
                         @if($art->active === 1)
