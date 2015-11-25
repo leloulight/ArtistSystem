@@ -12,7 +12,7 @@ class ArtMigration extends Migration
      */
     public function up()
     {
-        Schema::create('Art', function (Blueprint $table) {
+        Schema::create('arts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('imageURL');
@@ -30,6 +30,6 @@ class ArtMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('Art');
+        Schema::drop('arts');
     }
 }
