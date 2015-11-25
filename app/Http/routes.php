@@ -20,10 +20,12 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 
 Route::get('/', function () {
-    return view('app');
+    return Redirect('auth/login');
 });
 
-
+Route::get('home', function () {
+    return Redirect('art');
+});
 
 Route::group(array('middleware' => 'auth'), function()
 {

@@ -4,36 +4,43 @@
 
 @section('content')
 
-<h2>Art</h2>
+<h2>Arte</h2>
 @if ( !$art->count() )
-    You do not have works of arts.
+    No tienes obras de arte.
 @else
 
 	<h6 class = "right btn green new">
-        {!! link_to_route('art.create', 'New Art', array('class' => 'btn')) !!}
+        {!! link_to_route('art.create', 'Obra nueva', array('class' => 'btn')) !!}
     </h6>
      <table class = "bordered">
      	<thead>
-     		<th>Name</th>
-     		<th>Size</th>
-     		<th>Active</th>
+     		<th>Nombre</th>
+     		<th>Tamaño</th>
+     		<th>Activo</th>
      	</thead>
      	<tbody>
 		@foreach( $art as $art )
             <tr>
             	{!! Form::open(array('class' => 'form-inline', 'method' => 'POST', 'url' => array('art/activate', $art->id  ) )) !!}
-                        <th>{!! link_to_route('art.show', $art->name, array($art->id)) !!}</th>
-                        <th>{{$art->width}} x {{$art->height}}</th>
+                        <td>{!! link_to_route('art.show', $art->name, array($art->id)) !!}</td>
+                        <td>{{$art->width}} x {{$art->height}}</td>
+                        <td>
+                            @if($art->active)
+                                Activo
+                            @else
+                                Inactivo
+                            @endif
+
+                        </td>
                         @if($art->active === 1)
-                        	<th>{!! Form::submit('Deactivate', array('class' => 'btn orange')) !!}</th>
+                        	<td>{!! Form::submit('Desactivar', array('class' => 'btn orange')) !!}
                         @else
-                        	<th>{!! Form::submit('Activate', array('class' => 'btn green')) !!}</th>
+                        	<td>{!! Form::submit('Activar', array('class' => 'btn green')) !!}
                         @endif
                         
                 {!! Form::close() !!}
-                <th>{!! link_to_route('art.edit', 'Edit', array($art->id), array('class' => 'btn')) !!}</th>
+                {!! link_to_route('art.edit', 'Editar', array($art->id), array('class' => 'btn')) !!}</td>
 
-            	
             </tr>	
         @endforeach
      	</tbody>
