@@ -11,6 +11,23 @@
 |
 */
 
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+//Route::get('/','Auth\AuthController@getLogin');
+
+
 Route::get('/', function () {
     return view('app');
+});
+
+
+Route::group(array('middleware' => 'auth'), function()
+{
+  	Route::resource('art', 'ArtController');
+	Route::resource('', '');
+	Route::resource('', '');
+
 });
