@@ -31,6 +31,7 @@ Route::group(array('middleware' => 'auth'), function()
 {
   	Route::resource('art', 'ArtController');
    	Route::post('art/activate/{id}', 'ArtController@activate');
+   	Route::post('art/update/{id}', 'ArtController@update');
   	//Route::get('activate', 'ArtController@activate');
 	//Route::resource('', '');
 	//Route::resource('', '');

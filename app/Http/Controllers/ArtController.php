@@ -68,7 +68,8 @@ class ArtController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        return view('art.edit', array( 'art' => Art::whereId($id)->first() ));
     }
 
     /**
@@ -85,10 +86,11 @@ class ArtController extends Controller
     
         $input = array_except(Input::all(),'_method');
         
-        $art = Art::whereId($id)->first;
+        $art = Art::whereId($id)->first();
         
         if($art){
             $art->update($input);
+            return Redirect::route('art.index')->with('message','Obra subida correctamente');
         }
         else{
             return Redirect::route('art.index')->with('message','Error. Obra no encontrada');
