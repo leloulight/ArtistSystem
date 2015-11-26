@@ -26,7 +26,8 @@
     </div>   
 
     <div class = 'col-sm-6'>
-       {{$art->imageURL}}
+
+        <img src="/img/{{$art->imageURL}}" >
     </div>
 
 @endsection

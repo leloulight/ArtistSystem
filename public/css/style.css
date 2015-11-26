@@ -66,6 +66,11 @@ table a{
 
 }
 
+
+img{
+	height: 250px;
+	width: 100%;	
+}
 footer{
 	background-color: 212121;
 	padding: .5% 5%;
