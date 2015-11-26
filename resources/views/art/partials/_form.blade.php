@@ -16,7 +16,7 @@
 
 <div class = 'form-group col-sm-6'>
 	{!! Form::label('image', 'Imagen') !!}
-	{!! Form::file('imageURL')!!}
+	{!! Form::file('image')!!}
 </div>
 
 <div class = 'form-group col-sm-12'>

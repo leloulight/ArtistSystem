@@ -43,9 +43,19 @@ class ArtController extends Controller
     {
     
         $this->validate($request, Art::$rules);
-        $input = Input::all();
-        Art::create($input);
+        $input = array_except(Input::all(),array('_method', 'image'));
+        $art = Art::create($input);
+        
+        $file = Input::file('image');
+        
+        $finalName = $art->id  . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("img/"), $finalName );
+        
+        $art->imageURL = $finalName;
+        $art->save();
+        
         return Redirect::route('art.index')->with('message','Obra agregada');
+        
     }
 
     /**
@@ -84,12 +94,25 @@ class ArtController extends Controller
         
         $this->validate($request, Art::$rules);
     
-        $input = array_except(Input::all(),'_method');
+        $input = array_except(Input::all(), array('_method' , 'image') );
         
         $art = Art::whereId($id)->first();
         
         if($art){
+            
             $art->update($input);
+            
+            if (Input::hasFile('image')){
+                
+                $file = Input::file('image');
+        
+                $finalName = $art->id  . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path("img/"), $finalName );
+        
+                $art->imageURL = $finalName;
+                $art->save();
+            }
+            
             return Redirect::route('art.index')->with('message','Obra subida correctamente');
         }
         else{
