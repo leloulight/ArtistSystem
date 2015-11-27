@@ -7,6 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ArtMigration' => $baseDir . '/database/migrations/2015_11_25_160035_ArtMigration.php',
+    'ArtTableSeeder' => $baseDir . '/database/seeds/ArtTableSeeder.php',
+    'ContactFormMigration' => $baseDir . '/database/migrations/2015_11_27_005533_ContactFormMigration.php',
+    'ContactMigration' => $baseDir . '/database/migrations/2015_11_26_013046_ContactMigration.php',
+    'ContactTableSeeder' => $baseDir . '/database/seeds/ContactTableSeeder.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -82,6 +86,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
+    'MessageSeeder' => $baseDir . '/database/seeds/MessagesSeeder.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit_Extensions_GroupTestSuite' => $vendorDir . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
     'PHPUnit_Extensions_PhptTestCase' => $vendorDir . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',

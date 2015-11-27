@@ -30,6 +30,7 @@ Route::get('home', function () {
 Route::group(array('middleware' => 'auth'), function()
 {
   	Route::resource('art', 'ArtController');
+    Route::resource('contactform', 'ContactFormController');
    	Route::post('art/activate/{id}', 'ArtController@activate');
    	Route::post('art/update/{id}', 'ArtController@update');
   	//Route::get('activate', 'ArtController@activate');

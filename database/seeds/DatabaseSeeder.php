@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(ArtTableSeeder::class);
         $this->call(ContactTableSeeder::class);
+        $this->call(MessageSeeder::class);
 
         Model::reguard();
     }
