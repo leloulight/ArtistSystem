@@ -33,12 +33,8 @@ Route::group(array('middleware' => 'auth'), function()
     Route::resource('contactform', 'ContactFormController');
    	Route::post('art/activate/{id}', 'ArtController@activate');
    	Route::post('art/update/{id}', 'ArtController@update');
-  	//Route::get('activate', 'ArtController@activate');
 	Route::resource('contact', 'ContactController');
 	Route::post('contact/activate/{id}', 'ContactController@activate');
    	Route::post('contact/update/{id}', 'ContactController@update');
-
-
-	//Route::resource('', '');
 
 });

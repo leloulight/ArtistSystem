@@ -42,7 +42,7 @@ class ArtController extends Controller
     public function store(Request $request)
     {
     
-        $this->validate($request, Art::$rules);
+        $this->validate($request, Art::$create_rules);
         $input = array_except(Input::all(),array('_method', 'image'));
         $art = Art::create($input);
         
@@ -92,7 +92,7 @@ class ArtController extends Controller
     public function update(Request $request, $id)
     {
         
-        $this->validate($request, Art::$rules);
+        $this->validate($request, Art::$edit_rules);
     
         $input = array_except(Input::all(), array('_method' , 'image') );
         
