@@ -20,7 +20,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 
 Route::get('/', function () {
-    return Redirect('auth/login');
+    return Redirect('art');
 });
 
 Route::get('home', function () {
