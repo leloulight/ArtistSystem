@@ -36,5 +36,6 @@ Route::group(array('middleware' => 'auth'), function()
 	Route::resource('contact', 'ContactController');
 	Route::post('contact/activate/{id}', 'ContactController@activate');
    	Route::post('contact/update/{id}', 'ContactController@update');
+   	Route::resource('about','AboutController');
 
 });

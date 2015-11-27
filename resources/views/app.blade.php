@@ -12,7 +12,7 @@
             <div class="nav-wrapper">
               <a href="#" class="brand-logo">Logo</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="{{ Request::is('nosotros*')     || Request::is('nosotros')? 'active' : '' }}">{!! link_to_route('art.index', 'Acerca De') !!}</li>
+                <li class="{{ Request::is('about*')     || Request::is('nosotros')? 'active' : '' }}">{!! link_to_route('about.index', 'Acerca De') !!}</li>
                 <li class="{{ Request::is('art*')          || Request::is('art')? 'active' : '' }}">{!! link_to_route('art.index', 'Obras') !!}</li>
                 <li class="{{ Request::is('contact/*')     ||  Request::is('contact')? 'active' : '' }}">{!! link_to_route('contact.index', 'Contacto') !!}</li>
                 <li class="{{ Request::is('contactform/*') ||  Request::is('contactform')? 'active' : '' }}">{!! link_to_route('contactform.index', 'Mensajes') !!}</li>

@@ -68,8 +68,8 @@ table a{
 
 
 img{
-	height: 250px;
-	width: 100%;	
+	height: ;
+	max-width: 400px;	
 }
 footer{
 	background-color: 212121;

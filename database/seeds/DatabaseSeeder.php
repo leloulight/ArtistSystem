@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ArtTableSeeder::class);
         $this->call(ContactTableSeeder::class);
         $this->call(MessageSeeder::class);
-
+        $this->call(AboutTableSeeder::class);
         Model::reguard();
     }
 }
