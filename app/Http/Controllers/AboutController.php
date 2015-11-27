@@ -41,7 +41,7 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //$this->validate($request, About::$create_rules);
+        $this->validate($request, About::$rules);
         $input = array_except(Input::all(),'_method');
         $about = About::create($input);
 
@@ -80,7 +80,7 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //$this->validate($request,About::$edit_rules);
+        $this->validate($request,About::$rules);
 
         $input = array_except(Input::all(),'_method');
 

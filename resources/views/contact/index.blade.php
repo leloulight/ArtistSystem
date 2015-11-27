@@ -5,13 +5,15 @@
 @section('content')
 
 <h2>Contactos</h2>
+
+    <h6 class = "right btn green new">
+        {!! link_to_route('contact.create', 'Nuevo Correo', array('class' => 'btn')) !!}
+    </h6>
 @if ( !$contact->count() )
     No tienes obras de contacte.
 @else
 
-	<h6 class = "right btn green new">
-        {!! link_to_route('contact.create', 'Nuevo Correo', array('class' => 'btn')) !!}
-    </h6>
+	
      <table class = "bordered">
      	<thead>
      		<th>Email</th>

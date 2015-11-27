@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AboutMigration' => $baseDir . '/database/migrations/2015_11_27_063823_AboutMigration.php',
+    'AboutTableSeeder' => $baseDir . '/database/seeds/AboutTableSeeder.php',
     'ArtMigration' => $baseDir . '/database/migrations/2015_11_25_160035_ArtMigration.php',
     'ArtTableSeeder' => $baseDir . '/database/seeds/ArtTableSeeder.php',
     'ContactFormMigration' => $baseDir . '/database/migrations/2015_11_27_005533_ContactFormMigration.php',
